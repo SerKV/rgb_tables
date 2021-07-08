@@ -1,69 +1,24 @@
-const td=<td>item</td>
+const td = <td>item</td>;
+
+const tr = (
+	<tr>
+		{td}
+		{td}
+		{td}
+	</tr>);
+
+const tbody = (
+	<tbody>
+	{tr}
+	{tr}
+	{tr}
+	</tbody>
+);
 
 function App () {
-	return (
-		<>
-			<table className="table red">
-				<tbody>
-				<tr>
-					{td}
-					{td}
-					{td}
-				</tr>
-				<tr>
-					{td}
-					{td}
-					{td}
-				</tr>
-				<tr>
-					{td}
-					{td}
-					{td}
-				</tr>
-				</tbody>
-			</table>
+	const colors = ['red', 'green', 'blue', 'coral'];
 
-			<table className="table green">
-				<tbody>
-				<tr>
-					{td}
-					{td}
-					{td}
-				</tr>
-				<tr>
-					{td}
-					{td}
-					{td}
-				</tr>
-				<tr>
-					{td}
-					{td}
-					{td}
-				</tr>
-				</tbody>
-			</table>
-
-			<table className="table blue">
-				<tbody>
-				<tr>
-					<td>item</td>
-					<td>item</td>
-					<td>item</td>
-				</tr>
-				<tr>
-					<td>item</td>
-					<td>item</td>
-					<td>item</td>
-				</tr>
-				<tr>
-					<td>item</td>
-					<td>item</td>
-					<td>item</td>
-				</tr>
-				</tbody>
-			</table>
-		</>
-	);
-}
+	return colors.map((color) => <table key={color} className={`table ${color}`}>{tbody}</table>);
+};
 
 export default App;

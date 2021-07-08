@@ -25,3 +25,7 @@
 .table.blue td {
 	border-color: blue;
 }
+
+.table.coral td {
+    border-color: coral;
+}
