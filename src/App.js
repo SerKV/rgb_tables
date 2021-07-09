@@ -1,3 +1,4 @@
+import React from 'react'
 const td = <td>item</td>;
 
 const tr = (
@@ -14,9 +15,9 @@ const tbody = (
 	{tr}
 	</tbody>
 );
+const colors = ['red', 'green', 'blue', 'coral','red', 'green', 'blue', 'coral'];
 
 function App () {
-	const colors = ['red', 'green', 'blue', 'coral'];
 
 	return colors.map((color) => <table key={color} className={`table ${color}`}>{tbody}</table>);
 };
